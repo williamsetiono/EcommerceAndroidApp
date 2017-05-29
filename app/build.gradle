@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId 'com.williamsetiono.ecommerce'
+
+        // TODO: Please update the Google Project number and OneSignal Id below to yours.
+        manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                onesignal_app_id               : "1d80166a-972d-4173-9b5e-bb2bb0df7f39",
+                                onesignal_google_project_number: "401211824765"]
+
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 6
+        versionName '2.1.4'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+    useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.android.support:cardview-v7:23.1.1'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.android.support:palette-v7:23.1.1'
+    compile 'com.github.clans:fab:1.6.3'
+    compile files('libs/signpost-commonshttp4-1.2.1.2.jar')
+    compile files('libs/signpost-core-1.2.1.2.jar')
+    compile files('libs/signpost-jetty6-1.2.1.2.jar')
+    compile files('libs/picasso-2.5.2.jar')
+    compile files('libs/universal-image-loader-1.9.5.jar')
+    compile 'com.google.android.gms:play-services-gcm:9.0.2'
+    compile 'com.google.android.gms:play-services-analytics:9.0.2'
+    compile 'com.google.android.gms:play-services-location:9.0.2'
+    compile 'com.onesignal:OneSignal:2.+@aar'
+}

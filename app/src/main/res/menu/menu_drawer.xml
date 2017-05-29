@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/product"
+            android:icon="@drawable/ic_drawer_product"
+            android:title="@string/menu_product" />
+
+        <item
+            android:id="@+id/cart"
+            android:icon="@drawable/ic_drawer_cart"
+            android:title="@string/menu_cart" />
+
+        <item
+            android:id="@+id/checkout"
+            android:icon="@drawable/ic_drawer_checkout"
+            android:title="@string/menu_checkout" />
+
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_drawer_profile"
+            android:title="@string/menu_profile" />
+
+        <item
+            android:id="@+id/information"
+            android:icon="@drawable/ic_drawer_info"
+            android:title="@string/menu_info" />
+
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/ic_drawer_about"
+            android:title="@string/menu_about" />
+
+    </group>
+</menu>
